@@ -6,12 +6,12 @@ const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 const postController = require("./controllers/postController");
 const pageController = require("./controllers/pageController");
-const port = 80;
+const port = process.env.PORT || 5000;;
 
 //DATABASE CONNECTION
 mongoose
   .connect(
-    "mongodb+srv://kadir:Xdjf1pAXXAAZ4GUv@cluster0.gh3fn.mongodb.net/cleanblog-db?retryWrites=true&w=majority",
+    "mongodb+srv://kadir:<password>@cluster0.gh3fn.mongodb.net/cleanblog-db?retryWrites=true&w=majority",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
